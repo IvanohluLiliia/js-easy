@@ -2,9 +2,16 @@
 //  при цьому пропускаючи всі цифри.
 
 function reverseWithoutNumbers(str) {
-  // Ваш код тут
-}
+  var len = str.length;
+  var result = "";
 
+  for (i = len - 1; i >= 0; i--) {
+    if (isNaN(str[i])) {
+      result += str[i];
+    }
+  }
+  return result;
+}
 console.log(reverseWithoutNumbers("hello123world456")); // Виведе: "dlrowolleh"
 console.log(reverseWithoutNumbers("abc123xyz"));       // Виведе: "zyxabc"
 
